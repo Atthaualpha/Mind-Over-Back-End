@@ -1,4 +1,4 @@
-package com.mindover.mindover;
+package com.mindover;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
