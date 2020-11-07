@@ -16,9 +16,10 @@ public class AuthenticationService {
 	private PasswordEncoder passwordEncoder;
 
 	@Autowired
-	private SignupUserRequestMapper userMapper;
-
 	private AuthenticationRepository authRepository;
+	
+	@Autowired
+	private SignupUserRequestMapper userMapper;
 
 	/**
 	 * Create a new user in data base

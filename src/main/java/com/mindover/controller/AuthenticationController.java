@@ -11,12 +11,13 @@ import com.mindover.dto.request.SignupUserRequest;
 import com.mindover.service.AuthenticationService;
 
 @RestController
-@RequestMapping("/authenticate")
+@RequestMapping("/authentication")
 public class AuthenticationController {
 	
 	@Autowired
 	private AuthenticationService authService;
-
+	
+	
 	@PostMapping(path = "/signup", consumes= MediaType.APPLICATION_JSON_VALUE)
 	public final void signup(@RequestBody SignupUserRequest userRequest) {
 		

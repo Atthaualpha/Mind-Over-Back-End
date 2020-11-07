@@ -7,10 +7,12 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.mindover.projections.UserCredentials;
 import com.mindover.repository.AuthenticationRepository;
 
+@Service
 public class CustomSecurityUserDetailsService implements UserDetailsService {
 
 	@Autowired
@@ -25,6 +27,6 @@ public class CustomSecurityUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException("Cannot find user with email " + email);
 		}
 
-		return new User(email, "{bcrypt}" + user.getPassword(), Collections.emptyList());
+		return new User (email, user.getPassword(), Collections.emptyList());
 	}
 }
